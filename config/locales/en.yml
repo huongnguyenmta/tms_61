@@ -64,7 +64,6 @@ en:
         user_subject_finished: "This subject was completed."
         share_with_social: "You joining:"
         at: " at webside: "
-        url: "http://framgiatrainingsystem.com"
     user_subject:
       show:
         update: "Update"

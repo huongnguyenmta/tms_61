@@ -66,6 +66,7 @@ class User < ActiveRecord::Base
           user = User.new
           user.password = Devise.friendly_token[0,10]
           user.name = auth.info.name
+          user.role = User.statuses[:trainee]
           user.email = auth.info.email
           if auth.provider == "twitter"
             user.save(validate: false)
