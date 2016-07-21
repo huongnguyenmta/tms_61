@@ -40,6 +40,14 @@ class User < ActiveRecord::Base
       WHERE courses.status = #{Course.statuses[:in_process]})")
   end
 
+  scope :count_trainee_into_course_in_month, -> do
+    where(id: UserCourse.select(:user_id)
+      .where(course_id: Course.get_courses_in_month.map(&:id)),
+        role: User.roles[:trainee])
+  end
+
+  scope :user_is_supervisor, ->{where(role: User.roles[:supervisor])}
+
   class << self
     def role_titles
       User.roles.keys

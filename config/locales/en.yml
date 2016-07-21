@@ -232,3 +232,4 @@ mail:
   join_in_course: "You had assigned in course"
   delete_from_course: "You had been delete in course "
   thanks: "Thanks for joining and have a great day!"
+  subject_monthly_report: "Monthly report of course"

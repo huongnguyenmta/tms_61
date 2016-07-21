@@ -20,6 +20,13 @@ class Course < ActiveRecord::Base
   before_create :set_not_started_status
   after_update :create_user_subject, if: -> {self.in_process?}
 
+  scope :get_courses_in_month, -> do
+    where("(cast(strftime('%m', start_date) as int) <= #{Time.now.month}
+      AND cast(strftime('%m', end_date) as int) > #{Time.now.month})
+      OR cast(strftime('%m', end_date) as int) = #{Time.now.month}")
+      .where.not(status: Course.statuses[:not_started])
+  end
+
   def duration
     "#{start_date.to_formatted_s :short} : #{end_date.to_formatted_s :short}"
   end

@@ -20,6 +20,9 @@ gem "fog", "1.38.0"
 
 gem "koala"
 gem "social-share-button"
+gem "delayed_job_active_record"
+gem "delayed_job"
+gem "daemons"
 
 gem "omniauth"
 gem "omniauth-oauth2"
