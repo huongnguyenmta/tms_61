@@ -31,6 +31,10 @@ class UsersController < ApplicationController
   def test2
   end
 
+  def test3
+
+  end
+
   def test
     puts "Chanh xinh"
   end
