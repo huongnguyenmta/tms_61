@@ -27,4 +27,10 @@ class UsersController < ApplicationController
     params.require(:user).permit :name, :email, :password, :password_confirmation,
       :avatar
   end
+
+
+  def test
+    puts "Chanh xinh"
+  end
+
 end
