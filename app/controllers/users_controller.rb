@@ -28,6 +28,8 @@ class UsersController < ApplicationController
       :avatar
   end
 
+  def test2
+  end
 
   def test
     puts "Chanh xinh"
