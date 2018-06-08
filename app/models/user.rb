@@ -99,6 +99,4 @@ class User < ActiveRecord::Base
       errors.add :avatar, I18n.t("model.user.avatar_size_error")
     end
   end
-
-  # Create new comment
 end
